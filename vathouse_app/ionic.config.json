@@ -1,0 +1,7 @@
+{
+  "name": "vathouse_app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,79 @@
+<ion-menu id="menuCliente" [content]="Nav">
+    <ion-header >
+        <ion-toolbar color="principal">
+            <ion-title>Cliente</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="openPage(PClientePage)" menuClose>
+                <ion-icon name="home"></ion-icon>
+                Mapa
+            </button>
+            <button ion-item (click)="openPage(friendsPage)">
+                    <ion-icon name="map"></ion-icon>
+                Buscar Servicio
+            </button>
+            <button ion-item (click)="openPage(eventsPage)">
+                    <ion-icon name="settings"></ion-icon>
+                    configuración
+            </button>
+            <button ion-item (click)="closeMenu()" color="danger">
+                    <ion-icon name="close" ></ion-icon>
+                Close Menu
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-menu id="menuMedico" [content]="Nav">
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Medico</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <button ion-item (click)="openPage(PClientePage)" menuClose>
+                    <ion-icon name="call"></ion-icon>
+                    Cliente
+                </button>
+                <button ion-item (click)="openPage(friendsPage)">
+                    Friends
+                </button>
+                <button ion-item (click)="openPage(eventsPage)">
+                    Events
+                </button>
+                <button ion-item (click)="closeMenu()" color="danger">
+                        <ion-icon name="close" ></ion-icon>
+                    Close Menu
+                </button>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+    <ion-menu id="menuAdmin" [content]="Nav">
+            <ion-header>
+                <ion-toolbar>
+                    <ion-title>Admin</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <ion-list>
+                    <button ion-item (click)="openPage(PClientePage)" menuClose>
+                        <ion-icon name="call"></ion-icon>
+                        Cliente
+                    </button>
+                    <button ion-item (click)="openPage(friendsPage)">
+                        Friends
+                    </button>
+                    <button ion-item (click)="openPage(eventsPage)">
+                        Events
+                    </button>
+                    <button ion-item (click)="closeMenu()" color="danger">
+                            <ion-icon name="close" ></ion-icon>
+                        Close Menu
+                    </button>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+
+<ion-nav #Nav [root]="rootPage"></ion-nav>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Vethouse
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="formulario" (ngSubmit)="Logueo()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Username</ion-label>
+        <ion-input type="text" formControlName="Correo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input type="password" formControlName="Contrasena"></ion-input>
+      </ion-item>
+
+    </ion-list>
+   
+    <button type="submit" ion-button full icon-start [disabled]="!formulario.valid">
+      <ion-icon name="md-log-in"></ion-icon>
+      Entrar
+    </button>
+  </form>
+  <button ion-button clear full icon-start (click)="goToOtherPage()">
+    <ion-icon name="md-person-add"></ion-icon>
+    Registrar
+  </button>
+
+</ion-content>
